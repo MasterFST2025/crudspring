@@ -3,6 +3,7 @@ import Modal from 'react-modal'
 export default function FormProduits({isOpen,onClose,onProduitAjoute}) {
 
     const sendData=(e)=>{
+      //désactiver le comportement par défaut du formulaire
         e.preventDefault();
         const formData=new FormData(e.target.parentElement);
         const produit=Object.fromEntries(formData);
